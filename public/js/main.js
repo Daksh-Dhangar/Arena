@@ -8,9 +8,10 @@ const {username, room} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
 
-//const socket = io();
+const socket = io();
 //const socket = io.connect("https://my-pepoard.herokuapp.com");
-const socket = io.connect("https://my-pepoard.herokuapp.com");
+//
+//const socket = io.connect("https://my-pepoard.herokuapp.com");
 //Join chatroom
 socket.emit('joinRoom', {username, room});
 
