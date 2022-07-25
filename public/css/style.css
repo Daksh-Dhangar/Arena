@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 :root {
-	--dark-color-a: #a5b636;
-	--dark-color-b: #77780d;
+	--dark-color-a: #ea3a3a;
+	--dark-color-b: #d3623c;
 	--light-color: #000000;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -52,27 +52,28 @@ a {
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: rgb(67, 3, 36);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 2px black;
 }
 .chat-header h1{
 	margin-left: 500px;
 }
 .chat-main {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 3fr 1fr;
 	margin-bottom: 0;
 	overflow-y: scroll;
 }
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #fff;
+	color: rgb(46, 50, 7);
 	padding: 20px 20px 60px;
 	min-height: 500px;
 	max-height: 500px;
@@ -87,8 +88,18 @@ a {
 }
 
 .chat-sidebar h3 {
+	font-size: 30px;
+	font-weight: 200;
+	color:rgb(29, 2, 16);
 	margin-bottom: 15px;
+	margin-top: 70px;
 }
+
+.chat-sidebar span#hRoom {
+	font-size: 30px;
+	color: rgb(29, 2, 16);
+}
+
 .chat-sidebar ul {
 	overflow-y: scroll;
 }
@@ -105,7 +116,9 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
+	/*var(--light-color)*/
+	background-color: rgb(9, 24, 96);
+	color:#a5b636;
 	border-radius: 5px;
 }
 
@@ -138,15 +151,21 @@ a {
 	flex: 1;
 }
 
-/* Join Page */
-.join-container {
-	max-width: 500px;
-	margin: 80px auto;
-	/*background-color: rgb(177, 167, 111);*/
-}
 
+/*
+.join-container {
+	max-width: 1300px;
+	margin: 80px auto;
+	background-color: rgb(177, 167, 111);
+}*/
+/*
+.main form button {
+	margin-bottom: 100px;
+}
+*/
 .join-header {
-	color:#430d41;
+	color:#3a033a;
+	font-size:38px;
 	text-align: center;
 	padding: 20px;
 	background: var(--dark-color-a);
@@ -158,7 +177,12 @@ a {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
 }
-
+.join-main form {
+	margin-top: 30px;
+	margin-bottom: 180px;
+	display:flex;
+	justify-content: space-between;
+}
 .join-main p {
 	margin-bottom: 20px;
 }
@@ -191,6 +215,29 @@ a {
 	width: 100%;
 }
 
+#keep-side {
+	min-width: 500px;
+	
+	display: inline-block;
+}
+#right-side {
+	font-size: 30px;
+	color:rgb(37, 3, 39);
+	display:inline-block;
+	max-width:500px;
+}
+#top-room{
+	border: 2px solid rgb(53, 2, 2);
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px rgb(1, 49, 88);
+	padding-left: 80px;
+}
+button {
+	border-radius: 50px;
+}
+a{
+	border-radius: 50px;
+}
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;

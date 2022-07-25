@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
   <title>ChatCord App</title>
@@ -10,18 +11,26 @@
 <body>
   <div class="chat-container">
     <header class="chat-header">
-      <h1><i class="fas fa-smile"></i> ChatArena</h1>
-      <a href="index.html" class="btn">Leave Room</a>
+      <!--<i class="fas fa-smile"></i>-->
+      <h1> <span class="material-symbols-outlined">
+        token
+        </span>ChatArena<span class="material-symbols-outlined">
+					token
+					</span></h1>
+      <a href="index.html" class="btn">Leave</a>
     </header>
     <main class="chat-main">
+      <div class="chat-messages">	</div>
       <div class="chat-sidebar">
-        <h3><i class="fas fa-comments"></i> Room Name:</h3>
-        <h2 id="room-name"></h2>
-        <h3><i class="fas fa-users"></i> Users</h3>
+        <!--<i class="fas fa-comments"></i>-->
+        <div id = "top-room">
+        <span id = "hRoom"> Lobby:</span>
+        <span id="room-name"></span>
+      </div>
+        <!--<i class="fas fa-users"></i>-->
+        <h3> Users:</h3>
         <ul id="users">
         </ul>
-      </div>
-      <div class="chat-messages">	</div>
       </div>
     </main>
     <div class="chat-form-container">
@@ -29,11 +38,11 @@
         <input
           id="msg"
           type="text"
-          placeholder="Enter Message"
+          
           required
           autocomplete="off"
         />
-        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        <button class="btn" style = "margin-left:10px;"><i class="fas fa-paper-plane"></i></button>
       </form>
     </div>
   </div>
