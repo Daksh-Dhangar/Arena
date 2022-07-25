@@ -47,7 +47,7 @@ function outputMessage(message){
     const div = document.createElement('div');
     div.classList.add('message');
     div.innerHTML = `
-    <p class="meta">${message.username}<span style = "margin-left: 52em">${message.time}</span></p>
+    <p class="meta">${message.username}<span style = "margin-left: 800px">${message.time}</span></p>
     <p class="text">
         ${message.text}
     </p>
